@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MenuIcon, PawPrint, X } from "lucide-react";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,6 +13,29 @@ const Header = () => {
     }
     setIsMenuOpen(false);
   };
+
+  // Scroll handling for nav bar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setLastScrollY(currentScrollY);
+
+      // Update active section
+      const sections = ["hero", "services", "stats", "cta"];
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (currentSection && activeSection) setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <nav
@@ -81,6 +105,5 @@ const Header = () => {
     </nav>
   );
 };
-
 
 export default Header;

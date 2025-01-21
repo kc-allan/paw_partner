@@ -4,7 +4,7 @@ import React, {
 	useState,
 	ReactNode,
   } from 'react';
-import { User } from '../types/User';
+import { User } from '../types/user';
   
   interface AppContextInterface {
 	successMessage: string;

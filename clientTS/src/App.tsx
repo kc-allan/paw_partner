@@ -7,7 +7,6 @@ import LoginPage from "./pages/Authentication/LoginPage";
 
 function App() {
   const launched = import.meta.env.VITE_APP_LAUNCHED === "true";
-  const isAuth = true;
 
   return (
     <AppProvider>

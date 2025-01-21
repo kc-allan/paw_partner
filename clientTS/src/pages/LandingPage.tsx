@@ -6,8 +6,6 @@ import {
   MapPin,
   Calendar,
   Camera,
-  MenuIcon,
-  X,
   ArrowRight,
   ChevronDown,
   Loader2,
@@ -29,10 +27,7 @@ if (typeof window !== "undefined") {
 }
 
 const LandingPage: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [selectedService, setSelectedService] = useState<string>("daycare");
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
-  const [activeSection, setActiveSection] = useState<string>("hero");
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [animatedStats, setAnimatedStats] = useState({
     rating: 0,
@@ -64,29 +59,6 @@ const LandingPage: React.FC = () => {
       setSubmitting(false);
     }, 3000);
   };
-
-  // Scroll handling for nav bar
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setLastScrollY(currentScrollY);
-
-      // Update active section
-      const sections = ["hero", "services", "stats", "cta"];
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (currentSection) setActiveSection(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   // GSAP Animations
   useEffect(() => {
@@ -232,13 +204,13 @@ const LandingPage: React.FC = () => {
     return () => ctx.revert();
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMenuOpen(false);
-  };
+  // const scrollToSection = (sectionId: string) => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   setIsMenuOpen(false);
+  // };
 
   const services: {
     [key: string]: {

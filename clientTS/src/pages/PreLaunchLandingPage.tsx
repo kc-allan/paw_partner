@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   Heart,
   PawPrint,
-  ChevronRight,
-  Mail,
   BellRing,
   CheckCircle,
   Clock,
@@ -14,7 +12,6 @@ import {
 const PreLaunch = () => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

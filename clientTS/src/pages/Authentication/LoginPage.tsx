@@ -164,6 +164,7 @@ const LoginPage = () => {
     const currentForm = isSignUp ? signupForm : loginForm;
     const currentErrors = isSignUp ? signupErrors : loginErrors;
     const handleChange = isSignUp ? handleSignupChange : handleLoginChange;
+    const confirmPasswordValue = isSignUp ? signupForm.confirmPassword : "";
 
     return (
       <div
@@ -231,7 +232,7 @@ const LoginPage = () => {
                 id="confirmPassword"
                 name="confirmPassword"
                 type="password"
-                value={currentForm.confirmPassword}
+                value={confirmPasswordValue}
                 onChange={handleChange}
                 placeholder="Confirm your password"
                 error={currentErrors.confirmPassword}
