@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  outline: none;
+}
+
+#logo {
+  font-family: 'Playwrite VN', sans-serif;
+}
+
+button {
+  outline: none;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  transform: rotateY(90deg);
+}
+
+.animate-flip {
+  transform-origin: left;
+  animation: flip 3s ease-in-out;
+  transform-style: preserve-3d;
+  
+}
+
+.duration-1500 {
+  transition-duration: 1500ms;
+}
+
+.animate-scroll-up {
+  animation: scrollUp 1s forwards;
+}
+
+.animate-scroll-up-next {
+  animation: scrollUpNext 1s forwards;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scrollUpNext {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+ 
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
