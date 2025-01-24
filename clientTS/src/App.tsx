@@ -11,7 +11,6 @@ function App() {
   return (
     <AppProvider>
       <Routes>
-        <Route path="*" element={<h1>404 Not Found</h1>} />
         {!launched ? (
           <Route path="/" element={<PreLaunch />} />
         ) : (

@@ -1,0 +1,9 @@
+# robots.txt for Whiskr
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /private/
+
+Sitemap: https://www.whiskr.kiruiallan.me/sitemap.xml
