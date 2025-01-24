@@ -30,7 +30,7 @@ const PageNotFound:React.FC = () => {
           <p className="text-sm text-gray-500">
             Need help? Contact our support team at{' '}
             <a href="mailto:support@petcare.com" className="text-blue-500 hover:underline">
-              support@whiskr.kiruiallan.me
+              support.whiskr@kiruiallan.me
             </a>
           </p>
         </div>
