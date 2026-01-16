@@ -1,30 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Whiskr is the ultimate platform for pet owners, offering easy access to trusted pet services like grooming, walking, veterinary care, and more. Discover top-rated pet care providers, book appointments seamlessly, and ensure your pet’s health and happiness. Join Whiskr today for reliable pet services near you!"
+    />
+    <title>Whiskr</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Whiskr is the ultimate platform for pet owners, offering easy access to trusted pet services like grooming, walking, veterinary care, and more. Discover top-rated pet care providers, book appointments seamlessly, and ensure your pet’s health and happiness. Join Whiskr today for reliable pet services near you!" />
-  <title>
-    Whiskr
-  </title>
-</head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LF4XM0S4GJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LF4XM0S4GJ"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-LF4XM0S4GJ');
-</script>
-  
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    gtag("config", "G-LF4XM0S4GJ");
+  </script>
 
+  <body>
+    <div id="root"></div>
+    <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <input type="text" name="userType" />
+    </form>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Whiskr (formerly Paw Partner)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Whiskr is a Kenyan-based petcare platform that connects pet owners with trusted pet sitters and walkers. The platform offers a convenient way for pet owners to find reliable care for their pets while they are away or busy.
 
-Currently, two official plugins are available:
+**Good News!**: Hobbyists are not left out. You can now register on the platform to offer services as a pet sitter or groomer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **User Registration and Profiles**: Pet owners and pet sitters can create accounts, manage profiles, and view their service history.
+- **Service Listings**: Pet sitters can list their services, including availability, pricing, and specializations.
+- **Booking System**: Pet owners can browse available pet sitters, view profiles, and book services directly through the platform.
+- **Reviews and Ratings**: After a service is completed, pet owners can leave reviews and ratings for pet sitters to help other users make informed decisions.
+- **Secure Payments**: The platform supports secure payment processing for bookings, ensuring a safe transaction for both parties.
+- **Notifications**: Users receive notifications for booking confirmations, reminders, and updates.
+- **Customer Support**: Dedicated support for users to address any issues or inquiries.
 
-## Expanding the ESLint configuration
+## Getting Started
+To get started with Whiskr, follow these steps:
+1. Visit the [Whiskr website](https://whiskr.co.ke) or download the mobile app from the App Store or Google Play.
+2. Create an account as a pet owner or pet sitter.
+3. Complete your profile with relevant information and preferences.
+4. Browse available services or list your own services if you are a pet sitter.
+5. Start booking or accepting bookings!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Contact and Support
+For any questions or support, you can reach out to the Whiskr support team via the contact form on the website or through the app's support section.
 
-- Configure the top-level `parserOptions` property like this:
+We hope you enjoy using Whiskr to care for your pets or offer your pet care services!
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Happy pet caring!\
+The Whiskr Team
