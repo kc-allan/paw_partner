@@ -372,17 +372,17 @@ const PreLaunch = () => {
 
       <footer className="bg-gray-900 border-t border-gray-800 py-12 text-center text-gray-400 text-sm">
         <div className="flex justify-center gap-8 mb-8">
-          <a href="#" className="hover:text-orange-500 transition-colors transform hover:scale-110">
+          <a href="https://www.instagram.com/whiskr.ke?igsh=MXI0bnU0Zng0dmExdQ==" className="hover:text-orange-500 transition-colors transform hover:scale-110">
             <Instagram size={24} />
             <span className="sr-only">Instagram</span>
           </a>
-          <a href="#" className="hover:text-blue-600 transition-colors transform hover:scale-110">
+          <a href="https://facebook.com/profile.php?id=61586449331542" className="hover:text-blue-600 transition-colors transform hover:scale-110">
             <Facebook size={24} />
             <span className="sr-only">Facebook</span>
           </a>
-          <a href="#" className="hover:text-blue-400 transition-colors transform hover:scale-110">
-            <Twitter size={24} />
-            <span className="sr-only">Twitter</span>
+          <a href="https://www.tiktok.com/@whiskr.ke?_r=1&_t=ZS-93En8x2TPYT" className="hover:text-blue-400 transition-colors transform hover:scale-110">
+            <img src="https://cdn.simpleicons.org/tiktok/9CA3AF" alt="TikTok" width={24} height={24} />
+            <span className="sr-only">TikTok</span>
           </a>
         </div>
         <p className="mb-2">© {new Date().getFullYear()} Whiskr Kenya. All rights reserved.</p>
