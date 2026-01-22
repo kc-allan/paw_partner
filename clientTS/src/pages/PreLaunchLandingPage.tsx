@@ -13,7 +13,6 @@ import {
   Lock,
   Instagram,
   Facebook,
-  Twitter
 } from "lucide-react";
 import heroImage from "../assets/hero-illustration.png";
 import serviceDogWalking from "../assets/service-dog-walking.png";
